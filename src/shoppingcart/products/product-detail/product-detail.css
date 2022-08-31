@@ -1,0 +1,108 @@
+body{
+background-color: lightblue;
+}
+.detail-container{
+    width: 80%;
+    background-color: white;
+    margin: 20px auto;
+    display: flex;
+    background:linear-gradient(lightgray,);
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 3px 3px 30px black;
+}
+.back-btn{
+    border: none;
+    font-size: small;
+    border-radius: 3px;
+    color: dodgerblue;
+    transition: all .1s ease-in;
+}
+.back-btn::before{
+    content: '<=';
+}
+.back-btn:hover{
+    cursor: pointer;
+    background-color: dodgerblue;
+    color:white;
+}
+.product-detail-title{
+    color: dodgerblue;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-decoration: underline;
+    text-decoration-color: deeppink;
+    text-decoration-thickness: 5px;
+    text-transform: uppercase;
+}
+.cart{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+    right: 150px;
+}
+.p-image{
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+.pro-img{
+    border-radius: 10px;
+    max-width: 400px;
+    margin-top: 10px;
+    height: 500px;
+    transition: all .5s ease-in-out;
+}
+.pro-img:hover{
+    transform: scale(1.2);
+}
+.p-description{
+    font-size: 20px;
+    padding: 20px;
+    margin: 10px auto;
+}
+.p-description::first-letter{
+    color: blue;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    text-shadow: .1px .1px 2px black  ;
+    font-weight: bold;
+}
+.product-detail-body{
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+}
+.rating-price{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(43, 4, 71);
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: .1px .2px 2px black;
+}
+
+@media (max-width:500px){
+    .product-detail-body{
+     grid-template-columns: 1fr;
+    }
+    .pro-img{
+        height: 260px;
+    }
+    .p-image{
+      background-size: cover;
+       margin: 20px auto;
+       width: 200px;
+      background-repeat: no-repeat;
+    }
+    .product-title{
+        font-size:1.5rem;
+    }
+    h1{
+        font-size: 1.2rem;
+    }
+}
